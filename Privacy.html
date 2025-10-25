@@ -52,24 +52,47 @@
 
   <h2>1. Information We Collect</h2>
   <p>FreshRun itself does <strong>not</strong> collect, store, or share any personal data.</p>
+  <p>The app only processes information necessary to provide its core functionality — generating running routes and offering real-time navigation — and this processing happens primarily on your device.</p>
 
   <p>The app uses the following information:</p>
 
-  <p><strong>Location Data:</strong><br>
-  Your device’s location is used only to generate nearby running routes and, if you choose to start an activity, to track your run in real time.
-  This information stays on your device and is never uploaded, shared, or stored on external servers by the app.
-  Apple will ask for your permission before location access is enabled.</p>
-  <p><b>In-App Navigation:</b></p>
-  <p>When you start a Live Run, FreshRun uses your device’s precise location and heading continuously to provide turn-by-turn guidance.
-     This data is processed only on your device and is never stored or transmitted.</p>
-  <p>During an active run, the app uses background location to continue voice/navigation guidance when the screen is locked.</p>
-<p><b>Reverse Geocoding:</b></p>
-<p>When you search for an address or drop a pin on the map, Apple’s geocoding service processes that request to provide street names and locations.
-FreshRun does not receive or store the contents of these lookups.</p>
+  <section id="location-data">
+      <h2>Location Data</h2>
+      <p>Your device’s location is used to:</p>
+      <ul>
+        <li>Generate nearby running routes.</li>
+        <li>Track your run in real time when you start a Live Run.</li>
+      </ul>
+      <p>This information remains on your device and is not stored or shared by FreshRun.</p>
+      <p>Apple will always ask for your permission before any location access is enabled.</p>
+    </section>
 
-  <p><strong>Network Data (via Cloudflare):</strong><br>
-  When the app communicates with the FreshRun routing server, Cloudflare may temporarily log your IP address and basic device information (such as browser or OS type) for security and performance purposes.
+    <section id="routing-requests">
+      <h2>Routing Requests</h2>
+      <p>When you request a route, the selected start and end points are sent securely to OpenRouteService (an open-source routing provider) to calculate the path.</p>
+      <p>FreshRun does not store or log the route request, start point, or destination.</p>
+      <p>However, OpenRouteService may temporarily process this data to generate the route, in accordance with their own privacy policy.</p>
+      <p>No personal identifiers (such as name, account, or device ID) are ever sent along with the request.</p>
+    </section>
+
+    <section id="in-app-navigation">
+      <h2>In-App Navigation</h2>
+      <p>When you start a Live Run, FreshRun uses your device’s precise location and heading continuously to provide turn-by-turn voice guidance.</p>
+      <p>This data is processed only on your device and is never transmitted or stored externally.</p>
+      <p>During an active run, FreshRun temporarily uses background location so navigation can continue when the screen is locked. Background tracking ends automatically when your run finishes.</p>
+    </section>
+
+    <section id="reverse-geocoding">
+      <h2>Reverse Geocoding</h2>
+      <p>When you search for an address or drop a pin, Apple’s built-in geocoding service processes that request to find street names and coordinates.</p>
+      <p>FreshRun does not receive or store the contents of these lookups.</p>
+    </section>
+
+    <section id="NetworkData">
+  <h2>Network Data (via Cloudflare):</h2>
+  <p>When the app communicates with the FreshRun routing server, Cloudflare may temporarily log your IP address and basic device information (such as browser or OS type) for security and performance purposes.
   This is standard for all Cloudflare-protected services and is used only to maintain network reliability and prevent abuse.</p>
+    </section>
 
   <h2>2. Data Storage</h2>
   <p>All route and activity data you create in FreshRun is stored <strong>locally on your device</strong>.
