@@ -81,11 +81,13 @@
 
   <section id="routing-requests">
     <h2>Routing Requests</h2>
-    <p>When you request a route, the selected start and end points are sent securely to OpenRouteService (an open-source routing provider) to calculate the path.</p>
-    <p>FreshRun does not store or log the route request, start point, or destination.</p>
+    <p>Routing requests are processed by FreshRun’s self-hosted instance of OpenRouteService (ORS), based on open-source software from HeiGIT and OpenStreetMap.
+FreshRun’s ORS server does not store or log user location data. Requests are processed in memory and discarded immediately after a route is generated.</p>
     <p>OpenRouteService may temporarily process routing data to calculate your selected path, in accordance with their own privacy policy.</p>
     <p>All routing requests from FreshRun are securely relayed through our own routing server before reaching the OpenRouteService API. This means that OpenRouteService only receives the IP address of FreshRun’s server — not your device’s IP address. According to their policy, these server logs (which may include IP addresses) are retained for no more than 90 days and are used solely for security and service maintenance.</p>
     <p>FreshRun’s routing server is protected by Cloudflare to ensure fast, secure, and encrypted communication between the app and our routing infrastructure. Cloudflare helps protect against unauthorized access, spam, and denial-of-service attacks. While Cloudflare may temporarily log IP addresses and basic connection data for security and performance purposes, this information is automatically deleted after a short period and is never shared, sold, or used by FreshRun for tracking or analytics.</p>
+    <p>Our routing infrastructure stores map and elevation data derived from open data sources (OpenStreetMap and SRTM) to improve routing speed and accuracy.
+This data does not include or relate to any individual user or location request.</p>
     <p>No personal information or identifiers (such as name, account details, or device ID) are ever included in these requests.</p>
 
   </section>
