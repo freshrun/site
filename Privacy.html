@@ -7,10 +7,10 @@
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.65;
       margin: 40px auto;
-      max-width: 800px;
-      color: #333;
+      max-width: 840px;
+      color: #222;
       padding: 0 20px;
       background-color: #fff;
     }
@@ -19,18 +19,18 @@
       line-height: 1.3;
     }
     h1 {
-      font-size: 1.8em;
+      font-size: 1.9em;
       margin-bottom: 0.3em;
     }
     h2 {
-      margin-top: 1.5em;
+      margin-top: 1.6em;
       font-size: 1.2em;
     }
     p {
-      margin: 0.6em 0;
+      margin: 0.7em 0;
     }
     ul {
-      margin: 0.6em 0 0.6em 1.4em;
+      margin: 0.6em 0 0.8em 1.4em;
       padding: 0;
     }
     li {
@@ -54,111 +54,96 @@
       color: #666;
       text-align: center;
     }
+    em {
+      color: #555;
+    }
   </style>
 </head>
 <body>
   <h1>FreshRun Privacy Policy</h1>
-  <p><em>Last updated: December 2025</em></p>
+  <p><em>Last updated: June 2026</em></p>
 
-  <p>FreshRun is designed to respect your privacy. This policy explains what information the app and its connected services collect, how it is used, and how it is kept secure.</p>
+  <p>FreshRun is designed to help you discover and navigate running routes while respecting your privacy. This policy explains what information may be processed when you use the app, how it is used, and the third-party services involved in providing the app.</p>
 
-  <h2>1. Information We Collect</h2>
-  <p>FreshRun itself does <strong>not</strong> collect, store, or share any personal data.</p>
-  <p>The app only processes information necessary to provide its core functionality which is generating running routes and offering real-time navigation. This processing happens primarily on your device.</p>
+  <h2>1. Overview</h2>
+  <p>FreshRun is built to minimize the amount of personal data used. Saved routes, activities, and most app preferences are stored locally on your device unless otherwise stated in this policy.</p>
+  <p>FreshRun does not use third-party advertising SDKs and does not use in-app analytics or tracking for advertising purposes.</p>
 
-  <p>The app uses the following information:</p>
+  <h2>2. Information We Process</h2>
 
-  <section id="location-data">
-    <h2>Location Data</h2>
-    <p>Your device’s location is used to:</p>
-    <ul>
-      <li>Generate nearby running routes.</li>
-      <li>Track your run in real time when you start a Live Run.</li>
-    </ul>
-    <p>This information remains on your device and is not stored or shared by FreshRun.</p>
-    <p>Apple will always ask for your permission before any location access is enabled.</p>
-  </section>
-
-  <section id="routing-requests">
-    <h2>Routing Requests</h2>
-    <p>FreshRun operates its own dedicated routing infrastructure hosted on secure cloud servers under our control.</p>
-    <p>Routing requests are processed by FreshRun’s self-hosted instance of OpenRouteService (ORS), based on open-source software from HeiGIT and OpenStreetMap.
-FreshRun’s ORS server does not store or log user location data. Requests are processed in memory and discarded immediately after a route is generated.</p>
-    <p>OpenRouteService may temporarily process routing data to calculate your selected path, in accordance with their own privacy policy.</p>
-    <p>All routing requests from FreshRun are securely relayed through our own routing server before reaching the OpenRouteService API. This means that OpenRouteService only receives the IP address of FreshRun’s server — not your device’s IP address. According to their policy, these server logs (which may include IP addresses) are retained for no more than 90 days and are used solely for security and service maintenance.</p>
-    <p>FreshRun’s routing server is protected by Cloudflare to ensure fast, secure, and encrypted communication between the app and our routing infrastructure. Cloudflare helps protect against unauthorized access, spam, and denial-of-service attacks. While Cloudflare may temporarily log IP addresses and basic connection data for security and performance purposes, this information is automatically deleted after a short period and is never shared, sold, or used by FreshRun for tracking or analytics.</p>
-    <p>Our routing infrastructure stores map and elevation data derived from open data sources (OpenStreetMap and SRTM) to improve routing speed and accuracy.
-This data does not include or relate to any individual user or location request.</p>
-    <p>No personal information or identifiers (such as name, account details, or device ID) are ever included in these requests.</p>
-
-  </section>
-
-  <section id="in-app-navigation">
-    <h2>In-App Navigation</h2>
-    <p>When you start a Live Run, FreshRun uses your device’s precise location and heading continuously to provide turn-by-turn voice guidance.</p>
-    <p>This data is processed only on your device and is never transmitted or stored externally.</p>
-    <p>During an active run, FreshRun temporarily uses background location so navigation can continue when the screen is locked. Background tracking ends automatically when your run finishes.</p>
-  </section>
-
-  <section id="reverse-geocoding">
-    <h2>Reverse Geocoding</h2>
-    <p>When you search for an address or drop a pin, Apple’s built-in geocoding service processes that request to find street names and coordinates.</p>
-    <p>For routing, address lookup, and live navigation instructions, FreshRun also uses OpenRouteService’s (ORS) geocoding and reverse-geocoding features. These requests are securely relayed through FreshRun’s self-hosted routing server and are not associated with your identity or device. ORS processes the coordinates in memory only to return matching street names or nearby intersections and then discards the request data.</p>
-    <p>FreshRun does not receive or store the contents of these lookups.</p>
-  </section>
-
-  <section id="network-data">
-    <h2>Network Data (via Cloudflare)</h2>
-    <p>When the app communicates with the FreshRun routing server, Cloudflare may temporarily log your IP address and basic device information (such as browser or OS type) for security and performance purposes. This is standard for all Cloudflare-protected services and is used only to maintain network reliability and prevent abuse.</p>
-  </section>
-
-  <section id="connectivity-checks">
-  <h2>Connectivity & Server Status Checks</h2>
-  <p>When you open the app or access certain features (such as viewing the About screen), FreshRun may send a small request to its server to confirm that the routing service is online and functioning correctly. These connectivity checks help ensure that route generation and related services work reliably.</p>
-  <p>These requests do not include any personal data, location information, or identifiers. However, because they are routed through Cloudflare, your IP address and basic device information (such as browser or operating system type) may be temporarily logged by Cloudflare for security, performance, and abuse prevention. This data is automatically deleted after a short period and is never used by FreshRun for analytics or tracking.</p>
-</section>
-
-
-  <h2>2. Data Storage</h2>
-  <p>All route and activity data you create in FreshRun is stored <strong>locally on your device</strong>. It is not transmitted to or stored in the cloud. If you uninstall the app or reset your device, that data is deleted.</p>
-  <p>You can erase all FreshRun data and preferences from your device at any time using the <strong>Clear All Data</strong> option in the app’s About screen.</p>
-  <p><strong>If you have iCloud Backup enabled, your FreshRun data (such as saved routes or runs) may be included in your encrypted device backup managed by Apple.</strong></p>
-
-  <h2>3. Third-Party Services</h2>
-  <p>FreshRun uses the following services:</p>
+  <h2>Location Data</h2>
+  <p>FreshRun uses your device location to generate nearby running routes, support route-based features, and provide live navigation during a run.</p>
   <ul>
-  <li><strong>Apple Maps / MapKit</strong> – for map display and location search.</li>
-  <li><strong>OpenRouteService (by HeiGIT, based on OpenStreetMap data)</strong> – for generating running routes.</li>
-  <li><strong>Cloudflare</strong> – for secure and reliable network delivery.</li>
-</ul>
-  <p>These services process requests only to provide mapping and routing functionality.</p>
+    <li>When generating routes, location data may be used to calculate a route near your chosen or current position.</li>
+    <li>When using Live Run, the app may process your precise location and heading continuously to provide turn-by-turn guidance.</li>
+    <li>Background location may be used during an active run so navigation can continue when your screen is locked.</li>
+  </ul>
+  <p>FreshRun stores route and activity records locally on your device. FreshRun does not use your location for advertising or profiling.</p>
 
-  <p>Please review their own privacy policies for more details:</p>
+  <h2>Email Login Data</h2>
+  <p>If you sign in to FreshRun using email login, you provide your email address in order to receive a one-time verification code.</p>
+  <p>Email-based authentication is provided using Auth0. Auth0 processes authentication-related information, such as your email address and login activity, in order to verify your identity and provide sign-in services to FreshRun.</p>
+  <p>FreshRun uses this authentication flow to let you access the app securely without creating a password. FreshRun may retain a local login state on your device so you do not need to sign in every time you open the app.</p>
+
+  <h2>Routing and Geocoding Requests</h2>
+  <p>FreshRun uses its own routing infrastructure together with OpenRouteService and open map data to generate routes and geocoding results.</p>
+  <p>When you generate a route, search for a location, or use reverse geocoding, request data such as coordinates or search text may be sent through FreshRun’s routing infrastructure and to service providers involved in returning a routing or geocoding result.</p>
+  <p>FreshRun is designed so that route and geocoding requests are used to provide the requested result and are not used for advertising or user profiling by FreshRun.</p>
+
+  <h2>Connectivity and Security Data</h2>
+  <p>When the app communicates with FreshRun services, network and security providers such as Cloudflare may process technical information like IP address, request metadata, and device or browser characteristics for security, abuse prevention, and service delivery purposes.</p>
+  <p>FreshRun may also send basic service checks, such as server health or availability checks, to confirm that routing services are online and working properly.</p>
+
+  <h2>3. Data Storage</h2>
+  <p>Saved routes, activities, disclaimer acceptance, appearance settings, and similar app preferences are stored locally on your device.</p>
+  <p>If you use iCloud Backup or other Apple backup features, local app data may be included in your encrypted device backup managed by Apple.</p>
+  <p>You can remove local app data from your device using the <strong>Clear All Data</strong> option in the app.</p>
+
+  <h2>4. How We Use Information</h2>
+  <p>FreshRun uses information only as needed to operate core app features, including:</p>
   <ul>
-  <li><a href="https://www.apple.com/legal/privacy/data/en/apple-maps/" target="_blank" rel="noopener noreferrer">Apple Maps Privacy Policy</a></li>
-  <li><a href="https://heigit.org/privacy-policy/" target="_blank" rel="noopener noreferrer">OpenRouteService Privacy Policy</a></li>
-  <li><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">OpenStreetMap Privacy Policy</a></li>
-  <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a></li>
-</ul>
+    <li>Generating running routes.</li>
+    <li>Providing live navigation and voice guidance.</li>
+    <li>Letting users sign in securely with email verification codes.</li>
+    <li>Maintaining app reliability, routing availability, and service security.</li>
+  </ul>
 
-  <h2>4. Transparency & Commitment</h2>
-<p>FreshRun is built with privacy by design. We believe your data belongs to you, and that apps should be clear and honest about how information is used.</p>
-<ul>
-  <li>FreshRun contains no analytics, ads, or user tracking of any kind.</li>
-  <li>No personal or location data is ever stored on external servers.</li>
-  <li>You can clear all data and permissions at any time in the app settings.</li>
-</ul>
-<p>If we ever introduce new functionality that affects your data, this privacy policy will be updated, and you will be notified within the app.</p>
+  <h2>5. Third-Party Services</h2>
+  <p>FreshRun relies on third-party services to provide mapping, authentication, routing, and network protection features. These services may process information according to their own privacy policies.</p>
+  <ul>
+    <li><strong>Auth0</strong> – email login and authentication services.</li>
+    <li><strong>Apple Maps / MapKit</strong> – map display, system location features, and certain search/location functionality.</li>
+    <li><strong>OpenRouteService (HeiGIT) / OpenStreetMap data</strong> – route generation and certain geocoding or reverse geocoding features.</li>
+    <li><strong>Cloudflare</strong> – network security, performance, and request delivery.</li>
+  </ul>
 
+  <p>Please review their privacy information for more detail:</p>
+  <ul>
+    <li><a href="https://auth0.com/privacy" target="_blank" rel="noopener noreferrer">Auth0 Privacy Policy</a></li>
+    <li><a href="https://www.apple.com/legal/privacy/data/en/apple-maps/" target="_blank" rel="noopener noreferrer">Apple Maps Privacy Policy</a></li>
+    <li><a href="https://heigit.org/privacy-policy/" target="_blank" rel="noopener noreferrer">HeiGIT / OpenRouteService Privacy Policy</a></li>
+    <li><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">OpenStreetMap Privacy Policy</a></li>
+    <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a></li>
+  </ul>
 
-  <h2>5. Your Choices</h2>
-  <p>You can revoke location access at any time in your iOS settings. If location permissions are disabled, route generation will be limited to manual input.</p>
+  <h2>6. Your Choices</h2>
+  <ul>
+    <li>You can revoke location permission at any time in iOS Settings.</li>
+    <li>You can log out of the app from within FreshRun.</li>
+    <li>You can use <strong>Clear All Data</strong> to remove locally stored app data and reset the app on your device.</li>
+  </ul>
 
-  <h2>6. Contact</h2>
-  <p>If you have any questions about this privacy policy, please contact:</p>
-  <p><strong>📧 freshrunapp@gmail.com</strong></p>
+  <h2>7. Children’s Privacy</h2>
+  <p>FreshRun is not directed to children under 13, and we do not knowingly design the app to collect personal information from children.</p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect product, legal, or service changes. When we do, we will update the “Last updated” date on this page.</p>
+
+  <h2>9. Contact</h2>
+  <p>If you have questions about this Privacy Policy, please contact:</p>
+  <p><strong>freshrunapp@gmail.com</strong></p>
 
   <hr />
-  <footer>© 2025 FreshRun</footer>
+  <footer>© 2026 FreshRun</footer>
 </body>
 </html>
